@@ -1,0 +1,11 @@
+package org.redhat;
+
+import java.lang.String
+
+rule Bootstrap
+    when
+        $x: String()
+    then 
+        
+        System.out.println( $x);
+end
