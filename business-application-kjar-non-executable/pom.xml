@@ -141,19 +141,59 @@
       </build>
     </profile>
   </profiles>
-  <repositories>
-    <!-- Bootstrap repository to locate the parent pom when the parent pom 
-      has not been build locally. -->
-    <repository>
-      <id>jboss-public-repository-group</id>
+  <pluginRepositories>
+
+    <pluginRepository>
+      <id>jboss-snapshots-maven-repo-main</id>
       <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+      <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      <layout>default</layout>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </pluginRepository>
+
+    <!-- <pluginRepository>
+      <id>rh-maven-repo-main</id>
+      <name>JBoss Public Repository Group</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
       <layout>default</layout>
       <releases>
         <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
         <updatePolicy>daily</updatePolicy>
+      </snapshots>
+    </pluginRepository> -->
+  </pluginRepositories>
+  <repositories>
+
+    <!-- <repository>
+      <id>rh-maven-repo-main</id>
+      <name>JBoss Public Repository Group</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
+      <layout>default</layout>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <updatePolicy>daily</updatePolicy>
+      </snapshots>
+    </repository> -->
+
+    <repository>
+      <id>jboss-snapshots-maven-repo-main</id>
+      <name>JBoss Public Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      <layout>default</layout>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
       </snapshots>
     </repository>
   </repositories>
